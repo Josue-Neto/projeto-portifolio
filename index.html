@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
-        <title>Landing page responsive portfolio</title>
+        <title>Josué Portifolio</title>
     </head>
     <body>
         <header class="l-header">
@@ -16,10 +16,10 @@
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="inicio" class="nav__link">Início</a></li>
-                        <li class="nav__item"><a href="sobre" class="nav__link">Sobre</a></li>
-                        <li class="nav__item"><a href="projetos" class="nav__link">Projetos</a></li>
-                        <li class="nav__item"><a href="#" class="nav__link">Contato</a></li>
+                        <li class="nav__item"><a href="#inicio" class="nav__link">Início</a></li>
+                        <li class="nav__item"><a href="#sobre" class="nav__link">Sobre</a></li>
+                        <li class="nav__item"><a href="#projetos" class="nav__link">Projetos</a></li>
+                        <li class="nav__item"><a href="#contato" class="nav__link">Contato</a></li>
                     </ul>
                 </div>
 
@@ -29,7 +29,7 @@
             </nav>
         </header>
 
-        <main class="l-main bd-grid">
+        <main class="l-main bd-grid" id="inicio">
             <div class="home">
                 <div class="home__information">
                     <span class="home__pressent anime-text">Bem vindo, eu me chamo</span>
@@ -69,30 +69,86 @@
     
     <section id="projetos" class="projetos">
         <h2 class="projetos-titulo">Meus Projetos</h2>
-        <div class="projetos-caixa">
+        
+        <div class="projetos-caixa">    
+
             <div class="projetos-card">
-                <img src="img/projeto-memoria.png" alt="Descrição do Projeto 1" class="projetos-imagem">
+                <a href="https://josue-neto.github.io/projeto-combustivel/" target="_blank" class="projetos-card">
+                <img src="img/projeto-combustivel.png" alt="Descrição do Projeto 1" class="projetos-imagem">
                 <div class="caixa-textos-projetos">
-                <h3 class="info-projetos">Tutorial</h3>
-                <p class="paragrafo-projetos">Um breve tutorial sobre Linguagem orientada a objetos</p>
+                <h3 class="info-projetos">Projeto combustível:</h3>
+                <p class="paragrafo-projetos">Um projeto desenvolvido para indicar qual combustível é mais vantajoso com base nos preços informados.</p>
                 </div>
+                </a>
             </div>
               <div class="projetos-card">
                 <img src="img/projeto-sly.png" alt="Descrição do Projeto 2" class="projetos-imagem">
                 <div class="caixa-textos-projetos"> 
-                <h3 class="info-projetos">Jogo de adivinhação</h3>
-                <p class="paragrafo-projetos">Um pequeno jogo sobre acertar o nome de um personagem</p>
+                <h3 class="info-projetos">Projeto jogo de advinhação:</h3>
+                <p class="paragrafo-projetos">Desafio interativo no qual o jogador tenta descobrir o nome de um personagem, promovendo engajamento e diversão.</p>
                 </div>
             </div>
+
                <div class="projetos-card">
+                <a href="https://josue-neto.github.io/projeto-combustivel/" target="_blank" class="projetos-card"></a>
                 <img src="img/projeto.png" alt="Descrição do Projeto 3" class="projetos-imagem">
                  <div class="caixa-textos-projetos">
-                <h3 class="info-projetos">Jogo da Memória</h3>
-                <p class="paragrafo-projetos">Um jogo da memória simples em JavaScript</p>
+                <h3 class="info-projetos">Projeto filtro de clientes</h3>
+                <p class="paragrafo-projetos">Aplicação que permite a filtragem dinâmica de registros de clientes por meio de campos de busca personalizados.</p>
                 </div>
             </div>
         </div>
     </section>
+
+<section id="contato" class="contato">
+
+  <h2 class="contato-titulo">Contato</h2>
+
+  <form class="formulario-contato" id="formulario" onsubmit="enviar(event)">
+    <div class="grupo-form">
+      <input type="text" id="nome" class="campo-form" placeholder="Seu nome completo">
+    </div>
+    <div class="grupo-form">
+      <textarea id="mensagem" class="campo-form" placeholder="Sua mensagem" rows="4"></textarea>
+    </div>
+    <button type="submit" class="button-form">Enviar Mensagem</button>
+  </form>
+</section>
+
+    <footer class="footer">
+        
+                <div class="social">
+                    <ion-icon name="logo-facebook" class="home__social-icon"></ion-icon>
+                    <ion-icon name="logo-instagram" class="home__social-icon"></ion-icon>
+                    <ion-icon name="logo-twitter" class="home__social-icon"></ion-icon>
+                </div>
+    
+                <ul class="list">
+                    <li>
+                        <a href="#inicio">Inicio</a>
+                    </li>
+
+                    <li>
+                        <a href="#sobre">Sobre</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#projetos">Projetos</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#contato">Contato</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#Jogo da Memoria">Jogo da Memória</a>
+                    </li>
+                </ul>
+
+                <p class="copyright">
+                    gs
+                </p>
+    </footer>
     
         <!-- ICONS -->
         <script  type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>

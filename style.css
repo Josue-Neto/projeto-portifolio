@@ -228,7 +228,7 @@ img {
   font-size: var(--h1-font-size);
   background: linear-gradient(
     270deg,
-    #CA3F16 70%,
+    #CA3F16 50%,
     #FF9408 100%
   );
   background-clip: text;
@@ -368,7 +368,6 @@ img {
 }
 
 /*-- SOBRE --*/
-
 .sobre{
   display: flex;
   flex-wrap: wrap;
@@ -392,6 +391,7 @@ img {
   border-radius: 50%;
   box-shadow: 0 0 25px var(--first-color);
   transition: 0.3s ease-in-out;
+  animation: flutuar  5S ease-in-out infinite;
 }
 
 .img-sobre img:hover{
@@ -404,7 +404,7 @@ img {
   font-size: var(--h1-font-size);
   background: linear-gradient(
     270deg,
-    #CA3F16 70%,
+    #CA3F16 50%,
     #FF9408 100%
   );
   background-clip: text;
@@ -433,14 +433,17 @@ img {
 /*-- PROJETOS --*/
 .projetos{
     padding: 6rem 2rem;
-}
-.projetos-caixa{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
 }
+
+.projetos-caixa{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .projetos-card{
     background: rgba(255, 255, 255, 0.05);
     border-radius: 16px;
@@ -450,17 +453,19 @@ img {
     transition: all 0.3s ease;
     cursor: pointer;
 }
+
 .projetos-card:hover{
     box-shadow: 0 0 25px var(--first-color);
     transform: translateY(-10px) scale(1.03);
-    
 }
 
 .projetos-titulo{
+  text-align: center;
+  margin-bottom: 2rem;
   font-size: var(--h1-font-size);
   background: linear-gradient(
     270deg,
-    #CA3F16 70%,
+    #CA3F16 50%,
     #FF9408 100%
   );
   background-clip: text;
@@ -484,4 +489,131 @@ margin-bottom: 5px;
 
 .caixa-textos-projetos{
     padding: 1.5rem;
+}
+
+/*-- CAIXA CONTATO  --*/
+.contato {
+    background-color: var(--black-color);
+    padding: 6rem 2rem;
+    text-align: center;
+    display: grid;
+  }
+
+  .contato-titulo {
+  text-align: center;
+  font-size: var(--h1-font-size);
+  background: linear-gradient(
+    270deg,
+    #CA3F16 50%,
+    #FF9408 100%
+  );
+  background-clip: text;
+  color: transparent;
+  }
+
+  .formulario-contato {
+    width: 500px;
+    height: auto;
+    max-width: 500px;
+    margin: 10 auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+    border: 1px solid var(--first-color);
+    border-radius: 16px;  
+    box-shadow: 0px 0px 10px 1px var(--first-color);
+  }
+
+  .grupo-form {
+    margin-bottom: 1.5rem;
+  }
+
+  .campo-form {
+    width: 100%;
+    padding: 1rem;
+    background-color: transparent;
+    border: 2px solid var(--first-color);
+    border-radius: 8px;
+    color: var(--white-color);
+    font-size: 1rem;
+    outline: none;
+  }
+
+  .campo-form:focus {
+    border-color: var(--first-color);
+    box-shadow: 0 0 10px var(--first-color);
+  }
+
+  .button-form {
+    width: 100%;
+    padding: 1rem;
+    font-weight: bold;
+    background: linear-gradient(270deg, #CA3F16, #FF9408);
+    color: var(--white-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .button-form:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px var(--first-color);
+  }
+  
+/*-- FOOTER --*/
+.footer{
+  background-color: rgb(12, 12, 12);
+  padding: 10px 0;
+}
+
+.footer .social{
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer ul{
+  text-align: center;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.footer ul li{
+  display: incline-block;
+  margin-left: 20px;
+}
+
+.footer ul li a{
+  color: var(--white-color);
+  border-bottom: 3px solid transparent;
+  transition: 0.3s ease-in-out;
+}
+
+.footer ul li a:hover{
+  border-bottom: 3px solid var(--first-color);
+}
+
+.footer .copyright{
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+
+@keyframes flutuar{
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-20PX);
+    }
 }
