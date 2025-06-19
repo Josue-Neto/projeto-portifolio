@@ -103,6 +103,16 @@ img {
   font-weight: 700;
 }
 
+.nav__rap {
+  display: flex;
+  align-items: center;
+  padding-right: 30px;
+  height: 80px;
+  width: auto;
+  pointer-events: none;
+  user-select: none;
+}
+
 @media screen and (max-width: 768px) {
   .nav__menu {
     position: fixed;
